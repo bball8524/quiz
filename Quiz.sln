@@ -10,71 +10,71 @@ using System.Windows.Forms;
 
 namespace Quiz
 {
-    public partial class easyQuizForm : Form
+    public partial class normalQuizForm : Form
     {
         int nextQuestion = 0;        // Holds an integer to go to the next question.
         public int score = 0;        // Holds the score total.  
 
-    public easyQuizForm()
+        public normalQuizForm()
         {
             InitializeComponent();
         }
 
         private void nextButton_Click(object sender, EventArgs e)
-        {           
-                 switch (nextQuestion)
+        {
+            switch (nextQuestion)
             {
                 case 0:   // Info for Question 1.
-                    if(radAnswer2.Checked == true )
+                    if (radAnswer2.Checked == true)
                     {
-                       score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        score += 5;
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
-                        
+
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Incorrect. The correct answer is " + radAnswer2.Text + ".");
                     }
-                    
+
                     // Changes the label text to the information for Question 2.
-                    radAnswer1.Text = "Noxus";
-                    radAnswer2.Text = "Demacia";
-                    radAnswer3.Text = "VooDoo Lands";
-                    radAnswer4.Text = "Kumungu";
+                    radAnswer1.Text = "Digital Collector's Edition";
+                    radAnswer2.Text = "Gifted from friends";
+                    radAnswer3.Text = "Purchased with Riot Points";
+                    radAnswer4.Text = "Purchased with Influence Points";
                     numberLabel.Text = "Question 2";
                     questionLabel.Text = "Where does Annie come from?";
-                    this.BackgroundImage = Properties.Resources.Annie_0;
+                    this.BackgroundImage = Properties.Resources.Annie_1;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
                     radAnswer3.Checked = false;
-                    radAnswer4.Checked = false;               
+                    radAnswer4.Checked = false;
                     break;
                 case 1:     // Info for Question 2.
-                    if (radAnswer3.Checked == true)
+                    if (radAnswer1.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer3.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer1.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 3.
-                    radAnswer1.Text = "Maruader Ashe";
-                    radAnswer2.Text = "Freljord Ashe";
-                    radAnswer3.Text = "Sherwood Forest Ashe";
-                    radAnswer4.Text = "Woad Ashe";
+                    radAnswer1.Text = "Poppy";
+                    radAnswer2.Text = "Ashe";
+                    radAnswer3.Text = "Jinx";
+                    radAnswer4.Text = "Zyra";
                     numberLabel.Text = "Question 3";
-                    questionLabel.Text = "What's the name of this champion's skin?";
-                    this.BackgroundImage = Properties.Resources.Ashe_2;
+                    questionLabel.Text = "Who is Caitlyn's main rival?";
+                    this.BackgroundImage = Properties.Resources.Caitlyn_1;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -85,24 +85,24 @@ namespace Quiz
                     if (radAnswer3.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Incorrect. The correct answer is " + radAnswer3.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 4.
-                    radAnswer1.Text = "Noxus";
-                    radAnswer2.Text = "Bandle City";
-                    radAnswer3.Text = "Zaun";
-                    radAnswer4.Text = "Demacia";
+                    radAnswer1.Text = "Xerath";
+                    radAnswer2.Text = "Nasus";
+                    radAnswer3.Text = "Renekton";
+                    radAnswer4.Text = "Skarner";
                     numberLabel.Text = "Question 4";
-                    questionLabel.Text = "Where is Garen from?";
-                    this.BackgroundImage = Properties.Resources.Garen_0;
+                    questionLabel.Text = "Who betrayed Azir, which resulted the fall of the Shurima?";
+                    this.BackgroundImage = Properties.Resources.Azir_2;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -110,27 +110,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 3:     // Info for Question 4.
-                    if (radAnswer4.Checked == true)
+                    if (radAnswer1.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer4.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer1.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 5.
-                    radAnswer1.Text = "Inferno";
-                    radAnswer2.Text = "Apocalyptic";
-                    radAnswer3.Text = "Firestorm";
-                    radAnswer4.Text = "Wildfire";
+                    radAnswer1.Text = "Swain";
+                    radAnswer2.Text = "Graves";
+                    radAnswer3.Text = "Garen";
+                    radAnswer4.Text = "Draven";
                     numberLabel.Text = "Question 5";
-                    questionLabel.Text = "What is the name of Brand's skin in this backround?";
-                    this.BackgroundImage = Properties.Resources.Brand_1;
+                    questionLabel.Text = "Who is Darius' brother?";
+                    this.BackgroundImage = Properties.Resources.Darius_3;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -138,27 +138,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 4:     // Info for Question 5.
-                    if (radAnswer2.Checked == true)
+                    if (radAnswer4.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer2.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer4.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 6.
-                    radAnswer1.Text = "Xin Zhao";
-                    radAnswer2.Text = "Nasus";
-                    radAnswer3.Text = "Zyra";
-                    radAnswer4.Text = "Azir";
+                    radAnswer1.Text = "Master Yi";
+                    radAnswer2.Text = "Yasuo";
+                    radAnswer3.Text = "Jax";
+                    radAnswer4.Text = "Lee Sin";
                     numberLabel.Text = "Question 6";
-                    questionLabel.Text = "Who is this Champion?";
-                    this.BackgroundImage = Properties.Resources.Azir_0;
+                    questionLabel.Text = "Who taught Wukong to fight?";
+                    this.BackgroundImage = Properties.Resources.MonkeyKing_3;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -166,27 +166,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 5:     // Info for Question 6.
-                    if (radAnswer4.Checked == true)
+                    if (radAnswer1.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer4.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer1.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 7.
-                    radAnswer1.Text = "Bilgewater";
-                    radAnswer2.Text = "Piltover";
-                    radAnswer3.Text = "Bandle City";
-                    radAnswer4.Text = "Zaun";
+                    radAnswer1.Text = "Rengar";
+                    radAnswer2.Text = "Udyr";
+                    radAnswer3.Text = "Cougars";
+                    radAnswer4.Text = "Zyra";
                     numberLabel.Text = "Question 7";
-                    questionLabel.Text = "Caitlyn is the Sheriff of what town?";
-                    this.BackgroundImage = Properties.Resources.Caitlyn_0;
+                    questionLabel.Text = "Who raised Nidalee?";
+                    this.BackgroundImage = Properties.Resources.Nidalee_8;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -194,27 +194,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 6:     // Info for Question 7.
-                    if (radAnswer2.Checked == true)
+                    if (radAnswer3.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer2.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer3.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 8.
-                    radAnswer1.Text = "Shadow Ilses";
-                    radAnswer2.Text = "Zaun";
-                    radAnswer3.Text = "Bandle City";
-                    radAnswer4.Text = "Noxus";
+                    radAnswer1.Text = "Hecarim";
+                    radAnswer2.Text = "Karthus";
+                    radAnswer3.Text = "Kassidin";
+                    radAnswer4.Text = "Thresh";
                     numberLabel.Text = "Question 8";
-                    questionLabel.Text = "Kalista resides where?";
-                    this.BackgroundImage = Properties.Resources.Kalista_0;
+                    questionLabel.Text = "Who betrayed Kalista, leading to the creation of the Shadow Isle?";
+                    this.BackgroundImage = Properties.Resources.Kalista_2;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -225,24 +225,24 @@ namespace Quiz
                     if (radAnswer1.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Incorrect. The correct answer is " + radAnswer1.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 9.
-                    radAnswer1.Text = "Poppy";
-                    radAnswer2.Text = "Ashe";
-                    radAnswer3.Text = "Illioa";
-                    radAnswer4.Text = "Zyra";
+                    radAnswer1.Text = "Miss Fortune";
+                    radAnswer2.Text = "Illioa";
+                    radAnswer3.Text = "Katarina";
+                    radAnswer4.Text = "Nidalee";
                     numberLabel.Text = "Question 9";
-                    questionLabel.Text = "What is the name of this Champion?";
-                    this.BackgroundImage = Properties.Resources.Illaoi_0;
+                    questionLabel.Text = "Who was Gangplank's first love?";
+                    this.BackgroundImage = Properties.Resources.Gangplank_7;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -250,27 +250,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 8:     // Info for Question 9.
-                    if (radAnswer3.Checked == true)
+                    if (radAnswer2.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer3.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer2.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 10.
-                    radAnswer1.Text = "Bilgewater";
-                    radAnswer2.Text = "Piltover";
-                    radAnswer3.Text = "Bandle City";
-                    radAnswer4.Text = "Noxus";
+                    radAnswer1.Text = "Light Magic";
+                    radAnswer2.Text = "Hextech";
+                    radAnswer3.Text = "Death Magic";
+                    radAnswer4.Text = "Life Essence";
                     numberLabel.Text = "Question 10";
-                    questionLabel.Text = "Which town does Jinx run rampant?";
-                    this.BackgroundImage = Properties.Resources.Jinx_0;
+                    questionLabel.Text = "How did Ahri transform to a human from a fox?";
+                    this.BackgroundImage = Properties.Resources.Ahri_5;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -278,27 +278,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 9:     // Info for Question 10.
-                    if (radAnswer2.Checked == true)
+                    if (radAnswer4.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer2.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer4.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 11.
-                    radAnswer1.Text = "Varus";
-                    radAnswer2.Text = "Talon";
-                    radAnswer3.Text = "Swain";
-                    radAnswer4.Text = "Teemo";
+                    radAnswer1.Text = "Damacians";
+                    radAnswer2.Text = "Ionians";
+                    radAnswer3.Text = "Targonians";
+                    radAnswer4.Text = "Noxians";
                     numberLabel.Text = "Question 11";
-                    questionLabel.Text = "What is the name of this Champion?";
-                    this.BackgroundImage = Properties.Resources.Varus_0;
+                    questionLabel.Text = "Who enslaved Aurelion Sol?";
+                    this.BackgroundImage = Properties.Resources.AurelionSol_1;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -306,27 +306,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 10:     // Info for Question 11.
-                    if (radAnswer1.Checked == true)
+                    if (radAnswer3.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer1.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer3.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 12
-                    radAnswer1.Text = "Freljord";
-                    radAnswer2.Text = "Demacia";
-                    radAnswer3.Text = "Ionia";
-                    radAnswer4.Text = "Noxus";
+                    radAnswer1.Text = "Megling Commandos";
+                    radAnswer2.Text = "Scouts of the Mothership";
+                    radAnswer3.Text = "Bandle City Expeditionary Force ";
+                    radAnswer4.Text = "Screaming Yipsnakes ";
                     numberLabel.Text = "Question 12";
-                    questionLabel.Text = "Where does Karma hail from?";
-                    this.BackgroundImage = Properties.Resources.Karma_0;
+                    questionLabel.Text = "Teemo is apart of which Special Forces?";
+                    this.BackgroundImage = Properties.Resources.Teemo_8;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -334,27 +334,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 11:     // Info for Question 12.
-                    if (radAnswer3.Checked == true)
+                    if (radAnswer2.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer3.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer2.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 13.
-                    radAnswer1.Text = "Ziggs";
-                    radAnswer2.Text = "Heimerdinger";
-                    radAnswer3.Text = "Rumble";
-                    radAnswer4.Text = "Teemo";
+                    radAnswer1.Text = "Shauna";
+                    radAnswer2.Text = "Shannon";
+                    radAnswer3.Text = "Sharice";
+                    radAnswer4.Text = "Sarah";
                     numberLabel.Text = "Question 13";
-                    questionLabel.Text = "What is the name of this Champion?";
-                    this.BackgroundImage = Properties.Resources.Teemo_0;
+                    questionLabel.Text = "What is Vayne's first name?";
+                    this.BackgroundImage = Properties.Resources.Vayne_10;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -362,27 +362,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 12:     // Info for Question 13.
-                    if (radAnswer4.Checked == true)
+                    if (radAnswer1.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer4.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer1.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 14.
-                    radAnswer1.Text = "Demacia";
-                    radAnswer2.Text = "Zaun";
-                    radAnswer3.Text = "Noxus";
-                    radAnswer4.Text = "Ionia";
+                    radAnswer1.Text = "Rule Runeterra";
+                    radAnswer2.Text = "Torturing citizens";
+                    radAnswer3.Text = "Total destruction";
+                    radAnswer4.Text = "Absord knowledge";
                     numberLabel.Text = "Question 14";
-                    questionLabel.Text = "What nation does Darius belong to?";
-                    this.BackgroundImage = Properties.Resources.Darius_0;
+                    questionLabel.Text = "What is Vel'koz's purpose on Runeterra?";
+                    this.BackgroundImage = Properties.Resources.Velkoz_2;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -390,27 +390,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 13:     // Info for Question 14.
-                    if (radAnswer3.Checked == true)
+                    if (radAnswer4.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer3.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer4.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 15.
-                    radAnswer1.Text = "Karthus";
-                    radAnswer2.Text = "Thresh";
-                    radAnswer3.Text = "Hecarim";
-                    radAnswer4.Text = "Yorick";
+                    radAnswer1.Text = "Lucian";
+                    radAnswer2.Text = "Garen";
+                    radAnswer3.Text = "Jarvin";
+                    radAnswer4.Text = "Taric";
                     numberLabel.Text = "Question 15";
-                    questionLabel.Text = "What is the name of this Champion?";
-                    this.BackgroundImage = Properties.Resources.Karthus_0;
+                    questionLabel.Text = "Who is Lux's brother?";
+                    this.BackgroundImage = Properties.Resources.Lux_7;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -418,27 +418,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 14:     // Info for Question 15.
-                    if (radAnswer1.Checked == true)
+                    if (radAnswer2.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer1.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer2.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 16.
-                    radAnswer1.Text = "Zaun";
-                    radAnswer2.Text = "Bilgewater";
-                    radAnswer3.Text = "Demacia";
-                    radAnswer4.Text = "Kumungu";
+                    radAnswer1.Text = "Anivia";
+                    radAnswer2.Text = "Tryndamere";
+                    radAnswer3.Text = "Braum";
+                    radAnswer4.Text = "Sejuani";
                     numberLabel.Text = "Question 16";
-                    questionLabel.Text = "What is the nation Lucian hails from?";
-                    this.BackgroundImage = Properties.Resources.Lucian_0;
+                    questionLabel.Text = "Who is Ashe's rival?";
+                    this.BackgroundImage = Properties.Resources.Ashe_0;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -446,27 +446,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 15:     // Info for Question 16.
-                    if (radAnswer3.Checked == true)
+                    if (radAnswer4.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer3.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer4.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 17.
-                    radAnswer1.Text = "Vel'koz";
-                    radAnswer2.Text = "Rek'sai";
-                    radAnswer3.Text = "Cho'gath";
-                    radAnswer4.Text = "Kha'zix";
+                    radAnswer1.Text = "Treasury";
+                    radAnswer2.Text = "Armory";
+                    radAnswer3.Text = "Laboratory";
+                    radAnswer4.Text = "At the gates";
                     numberLabel.Text = "Question 17";
-                    questionLabel.Text = "What is the name of this Champion?";
-                    this.BackgroundImage = Properties.Resources.Velkoz_0;
+                    questionLabel.Text = "Where was Jinx's battle with Vi at?";
+                    this.BackgroundImage = Properties.Resources.Jinx_4;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -477,24 +477,24 @@ namespace Quiz
                     if (radAnswer1.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Incorrect. The correct answer is " + radAnswer1.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 18.
-                    radAnswer1.Text = "Demacia";
-                    radAnswer2.Text = "Piltover";
-                    radAnswer3.Text = "Noxus";
-                    radAnswer4.Text = "Ionia";
+                    radAnswer1.Text = "Annie";
+                    radAnswer2.Text = "Draven";
+                    radAnswer3.Text = "Katarina";
+                    radAnswer4.Text = "Darius";
                     numberLabel.Text = "Question 18";
-                    questionLabel.Text = "Where does Lee Sin come from?";
-                    this.BackgroundImage = Properties.Resources.LeeSin_0;
+                    questionLabel.Text = "Who is Garen's biggest Rival?";
+                    this.BackgroundImage = Properties.Resources.Garen_4;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -502,27 +502,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 17:     // Info for Question 18.
-                    if (radAnswer4.Checked == true)
+                    if (radAnswer3.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer4.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer3.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 19.
-                    radAnswer1.Text = "Hunter";
-                    radAnswer2.Text = "Ninja";
-                    radAnswer3.Text = "Warrior";
-                    radAnswer4.Text = "Magi";
+                    radAnswer1.Text = "Miss Fortune";
+                    radAnswer2.Text = "Katarina";
+                    radAnswer3.Text = "Vayne";
+                    radAnswer4.Text = "Kayle";
                     numberLabel.Text = "Question 19";
-                    questionLabel.Text = "What is Zed?";
-                    this.BackgroundImage = Properties.Resources.Zed_0;
+                    questionLabel.Text = "Who is Morgana's sister?";
+                    this.BackgroundImage = Properties.Resources.Morgana_5;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -530,27 +530,27 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 18:     // Info for Question 19.
-                    if (radAnswer2.Checked == true)
+                    if (radAnswer4.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer2.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer4.Text + ".");
                     }
 
                     // Changes the label text to the information for Question 20.
-                    radAnswer1.Text = "Ivern";
-                    radAnswer2.Text = "Jhin";
-                    radAnswer3.Text = "Aurelion Sol";
-                    radAnswer4.Text = "Bard";
+                    radAnswer1.Text = "A Temple";
+                    radAnswer2.Text = "Cemetary";
+                    radAnswer3.Text = "Laboratory";
+                    radAnswer4.Text = "Shadow Ilses";
                     numberLabel.Text = "Question 20";
-                    questionLabel.Text = "What is the name of this Champion?";
-                    this.BackgroundImage = Properties.Resources.AurelionSol_0;
+                    questionLabel.Text = "Where did Varus get corrupted at?";
+                    this.BackgroundImage = Properties.Resources.Varus_3;
                     nextQuestion++;
                     radAnswer1.Checked = false;
                     radAnswer2.Checked = false;
@@ -558,25 +558,25 @@ namespace Quiz
                     radAnswer4.Checked = false;
                     break;
                 case 19:     // Info for Question 20.
-                    if (radAnswer3.Checked == true)
+                    if (radAnswer1.Checked == true)
                     {
                         score += 5;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
                         MessageBox.Show("Correct.");
                     }
                     else
                     {
                         score += 0;
-                        easyScoreLabel.Text = score.ToString() + " out of 100.";
-                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer3.Text + ".");
+                        normalScoreLabel.Text = score.ToString() + " out of 100.";
+                        MessageBox.Show("Incorrect. The correct answer is " + radAnswer1.Text + ".");
                     }
-                                   
+
                     scoreForm myScore = new scoreForm();
                     myScore.scoreLabel.Text = score.ToString() + " out of 100.";
                     myScore.Show();
                     this.Hide();
                     break;
-            }            
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
