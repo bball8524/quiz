@@ -1,21 +1,58 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz", "Quiz\Quiz.csproj", "{B483DC56-3485-44E3-80FE-A795BE7A6C43}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B483DC56-3485-44E3-80FE-A795BE7A6C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B483DC56-3485-44E3-80FE-A795BE7A6C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B483DC56-3485-44E3-80FE-A795BE7A6C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B483DC56-3485-44E3-80FE-A795BE7A6C43}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Quiz
+{
+    public partial class quizModeForm : Form
+    {       
+        public quizModeForm()
+        {
+            InitializeComponent();
+        }
+
+        private void easyButton_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the Quiz Mode form.
+            easyQuizForm myeasyQuizForm = new easyQuizForm();
+
+            // Opens the Quiz Selection form.
+            myeasyQuizForm.Show();
+
+            // Closes this form.
+            Close();
+        }
+
+        private void normalButton_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the Quiz Mode form.
+          normalQuizForm mynormalQuizForm = new normalQuizForm();
+
+            // Opens the Quiz Selection form.
+            mynormalQuizForm.Show();
+
+            // Closes this form.
+            Close();
+        }
+
+        public void hardButton_Click(object sender, EventArgs e)
+        {        
+            MessageBox.Show("You will have 15 seconds to answer each question. Good Luck!");
+
+            // Create an instance of the Quiz Mode form.
+            hardQuizForm myhardQuizForm = new hardQuizForm();
+
+            // Opens the Quiz Selection form.
+            myhardQuizForm.Show();
+
+            // Closes this form.
+            Close();
+        }       
+    }
+}
